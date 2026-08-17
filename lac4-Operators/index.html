@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document of operators in js</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <p>
+    <strong>JavaScript Operators:</strong>
+    Operators are symbols used to perform operations on values and variables.
+</p>
+
+<!-- 1. Arithmetic Operators -->
+
+<p>
+    <strong>Arithmetic Operators:</strong>
+    Arithmetic operators are used to perform mathematical calculations.
+</p>
+
+<p>
+    <strong>+</strong> Addition — adds two values.
+    Example: <code>10 + 5</code> → <code>15</code>
+</p>
+
+<p>
+    <strong>-</strong> Subtraction — subtracts one value from another.
+    Example: <code>10 - 5</code> → <code>5</code>
+</p>
+
+<p>
+    <strong>*</strong> Multiplication — multiplies two values.
+    Example: <code>10 * 5</code> → <code>50</code>
+</p>
+
+<p>
+    <strong>/</strong> Division — divides one value by another.
+    Example: <code>10 / 5</code> → <code>2</code>
+</p>
+
+<p>
+    <strong>%</strong> Modulus — returns the remainder after division.
+    Example: <code>10 % 3</code> → <code>1</code>
+</p>
+
+<p>
+    <strong>**</strong> Exponentiation — raises a number to a power.
+    Example: <code>2 ** 3</code> → <code>8</code>
+</p>
+
+<p>
+    <strong>++</strong> Increment — increases a value by 1.
+    Example: <code>x++</code>
+</p>
+
+<p>
+    <strong>--</strong> Decrement — decreases a value by 1.
+    Example: <code>x--</code>
+</p>
+
+
+<!-- 2. Assignment Operators -->
+
+<p>
+    <strong>Assignment Operators:</strong>
+    Assignment operators are used to assign or update values in variables.
+</p>
+
+<p>
+    <strong>=</strong> Assigns a value.
+    Example: <code>x = 10</code>
+</p>
+
+<p>
+    <strong>+=</strong> Adds a value and assigns the result.
+    Example: <code>x += 5</code> is the same as <code>x = x + 5</code>
+</p>
+
+<p>
+    <strong>-=</strong> Subtracts a value and assigns the result.
+    Example: <code>x -= 5</code>
+</p>
+
+<p>
+    <strong>*=</strong> Multiplies and assigns the result.
+    Example: <code>x *= 5</code>
+</p>
+
+<p>
+    <strong>/=</strong> Divides and assigns the result.
+    Example: <code>x /= 5</code>
+</p>
+
+<p>
+    <strong>%=</strong> Performs modulus and assigns the result.
+    Example: <code>x %= 5</code>
+</p>
+
+<p>
+    <strong>**=</strong> Performs exponentiation and assigns the result.
+    Example: <code>x **= 2</code>
+</p>
+
+
+<!-- 3. Comparison Operators -->
+
+<p>
+    <strong>Comparison Operators:</strong>
+    Comparison operators compare two values and return a Boolean value:
+    <code>true</code> or <code>false</code>.
+</p>
+
+<p>
+    <strong>==</strong> Equal to — compares values after type conversion if necessary.
+    Example: <code>5 == "5"</code> → <code>true</code>
+</p>
+
+<p>
+    <strong>===</strong> Strictly equal to — compares both value and data type.
+    Example: <code>5 === "5"</code> → <code>false</code>
+</p>
+
+<p>
+    <strong>!=</strong> Not equal to — checks whether values are different.
+    Example: <code>5 != 3</code> → <code>true</code>
+</p>
+
+<p>
+    <strong>!==</strong> Strictly not equal to — checks value or data type difference.
+    Example: <code>5 !== "5"</code> → <code>true</code>
+</p>
+
+<p>
+    <strong>&gt;</strong> Greater than.
+    Example: <code>10 &gt; 5</code> → <code>true</code>
+</p>
+
+<p>
+    <strong>&lt;</strong> Less than.
+    Example: <code>5 &lt; 10</code> → <code>true</code>
+</p>
+
+<p>
+    <strong>&gt;=</strong> Greater than or equal to.
+    Example: <code>10 &gt;= 10</code> → <code>true</code>
+</p>
+
+<p>
+    <strong>&lt;=</strong> Less than or equal to.
+    Example: <code>5 &lt;= 10</code> → <code>true</code>
+</p>
+
+
+<!-- 4. Logical Operators -->
+
+<p>
+    <strong>Logical Operators:</strong>
+    Logical operators are mainly used to combine or reverse conditions.
+</p>
+
+<p>
+    <strong>&&</strong> Logical AND — returns true when both conditions are true.
+    Example: <code>age &gt;= 18 && age &lt;= 60</code>
+</p>
+
+<p>
+    <strong>||</strong> Logical OR — returns true when at least one condition is true.
+    Example: <code>age &lt; 18 || age &gt; 60</code>
+</p>
+
+<p>
+    <strong>!</strong> Logical NOT — reverses a Boolean value.
+    Example: <code>!true</code> → <code>false</code>
+</p>
+
+
+<!-- 5. Ternary Operator -->
+
+<p>
+    <strong>?:</strong> Ternary Operator — a short way to write a simple if-else condition.
+    Example:
+    <code>age &gt;= 18 ? "Adult" : "Minor"</code>
+</p>
+
+
+<!-- 6. Nullish Coalescing Operator -->
+
+<p>
+    <strong>??</strong> Nullish Coalescing Operator — returns the right-side value
+    when the left-side value is <code>null</code> or <code>undefined</code>.
+</p>
+
+<p>
+    Example:
+    <code>let name = username ?? "Guest";</code>
+</p>
+
+
+<!-- 7. Optional Chaining -->
+
+<p>
+    <strong>?.</strong> Optional Chaining Operator — safely accesses a property
+    or method when an object may be <code>null</code> or <code>undefined</code>.
+</p>
+
+<p>
+    Example:
+    <code>user?.address?.city</code>
+</p>
+
+
+<!-- 8. Type Operators -->
+
+<p>
+    <strong>typeof</strong> — returns the data type of a value.
+    Example: <code>typeof "Sanu"</code> → <code>"string"</code>
+</p>
+
+<p>
+    <strong>instanceof</strong> — checks whether an object belongs to a particular
+    constructor or class.
+    Example: <code>arr instanceof Array</code> → <code>true</code>
+</p>
+
+
+<!-- 9. Bitwise Operators -->
+
+<p>
+    <strong>Bitwise Operators:</strong>
+    These operators work with numbers at the binary/bit level.
+</p>
+
+<p>
+    <strong>&amp;</strong> Bitwise AND
+</p>
+
+<p>
+    <strong>|</strong> Bitwise OR
+</p>
+
+<p>
+    <strong>^</strong> Bitwise XOR
+</p>
+
+<p>
+    <strong>~</strong> Bitwise NOT
+</p>
+
+<p>
+    <strong>&lt;&lt;</strong> Left Shift
+</p>
+
+<p>
+    <strong>&gt;&gt;</strong> Sign-propagating Right Shift
+</p>
+
+<p>
+    <strong>&gt;&gt;&gt;</strong> Zero-fill Right Shift
+</p>
+
+
+<!-- 10. String Operator -->
+
+<p>
+    <strong>+</strong> can also be used as a String Concatenation Operator.
+    It joins strings together.
+</p>
+
+<p>
+    Example:
+    <code>"Hello " + "Sanu"</code> → <code>"Hello Sanu"</code>
+</p>
+
+
+<!-- 11. Spread Operator -->
+
+<p>
+    <strong>...</strong> Spread Operator — expands the elements of an array
+    or properties of an object.
+</p>
+
+<p>
+    Example:
+    <code>let arr2 = [...arr1];</code>
+</p>
+
+
+<!-- 12. Rest Operator -->
+
+<p>
+    <strong>...</strong> Rest Operator — collects multiple values into an array
+    inside function parameters or destructuring.
+</p>
+
+<p>
+    Example:
+    <code>function sum(...numbers) { }</code>
+</p>
+
+
+<!-- 13. Delete Operator -->
+
+<p>
+    <strong>delete</strong> — removes a property from an object.
+</p>
+
+<p>
+    Example:
+    <code>delete user.age;</code>
+</p>
+
+
+<!-- 14. In Operator -->
+
+<p>
+    <strong>in</strong> — checks whether a property exists in an object.
+</p>
+
+<p>
+    Example:
+    <code>"name" in user</code> → <code>true</code>
+</p>
+
+
+<!-- 15. New Operator -->
+
+<p>
+    <strong>new</strong> — creates a new object from a constructor or class.
+</p>
+
+<p>
+    Example:
+    <code>const user = new Person();</code>
+</p>
+
+
+<!-- 16. Operator Precedence -->
+
+<p>
+    <strong>Operator Precedence:</strong>
+    When multiple operators are used in one expression,
+    JavaScript follows a specific order to decide which operation happens first.
+</p>
+
+<p>
+    Example:
+    <code>2 + 3 * 4</code> → <code>14</code>
+    because multiplication is performed before addition.
+</p>
+    <script src="index.js"></script>
+</body>
+</html>

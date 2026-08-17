@@ -1,0 +1,7 @@
+h1{
+    background-color: bisque;
+    color: aquamarine;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

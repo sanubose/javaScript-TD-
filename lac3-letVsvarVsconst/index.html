@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let vs var vs const</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="js-notes">
+
+  <h1>var vs let vs const</h1>
+
+  <p>
+    JavaScript mein variables declare karne ke liye mainly
+    <strong>var, let aur const</strong> ka use hota hai.
+  </p>
+
+  <!-- VAR -->
+  <section>
+    <h2>1. var</h2>
+
+    <p><strong>Scope:</strong> Function Scope</p>
+    <p>
+      Agar var ko kisi function ke andar declare kiya hai,
+      to wo poore function ke andar accessible hota hai.
+    </p>
+
+    <h3>Re-declaration</h3>
+
+    <pre>
+var name = "Sanu";
+var name = "Bose";
+
+console.log(name); // Bose
+    </pre>
+
+    <p>
+      <strong>var ko same scope mein dobara declare kar sakte hain.</strong>
+    </p>
+
+    <h3>Re-assignment</h3>
+
+    <pre>
+var age = 25;
+
+age = 26;
+
+console.log(age); // 26
+    </pre>
+
+    <p>
+      <strong>var ki value change kar sakte hain.</strong>
+    </p>
+
+    <h3>Block Scope</h3>
+
+    <pre>
+{
+  var city = "Sitapur";
+}
+
+console.log(city); // Sitapur
+    </pre>
+
+    <p>
+      var block scoped nahi hota. Isliye block ke bahar bhi access ho sakta hai.
+    </p>
+  </section>
+
+
+  <!-- LET -->
+  <section>
+    <h2>2. let</h2>
+
+    <p><strong>Scope:</strong> Block Scope</p>
+
+    <p>
+      let sirf us block <strong>{ }</strong> ke andar accessible hota hai
+      jisme usse declare kiya gaya hai.
+    </p>
+
+    <h3>Re-declaration</h3>
+
+    <pre>
+let name = "Sanu";
+
+// let name = "Bose"; ❌ Error
+    </pre>
+
+    <p>
+      <strong>Same scope mein let ko dobara declare nahi kar sakte.</strong>
+    </p>
+
+    <h3>Re-assignment</h3>
+
+    <pre>
+let age = 25;
+
+age = 26;
+
+console.log(age); // 26
+    </pre>
+
+    <p>
+      let ki value ko change kar sakte hain.
+    </p>
+
+    <h3>Block Scope Example</h3>
+
+    <pre>
+{
+  let city = "Sitapur";
+
+  console.log(city); // Sitapur
+}
+
+console.log(city); // ❌ Error
+    </pre>
+
+    <p>
+      Block ke bahar let variable accessible nahi hota.
+    </p>
+  </section>
+
+
+  <!-- CONST -->
+  <section>
+    <h2>3. const</h2>
+
+    <p><strong>Scope:</strong> Block Scope</p>
+
+    <p>
+      const bhi let ki tarah block scoped hota hai.
+    </p>
+
+    <h3>Re-declaration</h3>
+
+    <pre>
+const name = "Sanu";
+
+// const name = "Bose"; ❌ Error
+    </pre>
+
+    <p>
+      Same scope mein const ko dobara declare nahi kar sakte.
+    </p>
+
+    <h3>Re-assignment</h3>
+
+    <pre>
+const age = 25;
+
+age = 26; // ❌ Error
+    </pre>
+
+    <p>
+      <strong>const variable ko re-assign nahi kar sakte.</strong>
+    </p>
+
+    <h3>const ko value dena compulsory hai</h3>
+
+    <pre>
+const name = "Sanu"; // ✅
+
+// const age; ❌ Error
+    </pre>
+
+    <p>
+      const declare karte time value deni zaroori hai.
+    </p>
+  </section>
+
+
+  <!-- COMPARISON -->
+  <section>
+    <h2>var vs let vs const</h2>
+
+    <table border="1">
+      <tr>
+        <th>Feature</th>
+        <th>var</th>
+        <th>let</th>
+        <th>const</th>
+      </tr>
+
+      <tr>
+        <td>Scope</td>
+        <td>Function</td>
+        <td>Block</td>
+        <td>Block</td>
+      </tr>
+
+      <tr>
+        <td>Re-declare</td>
+        <td>✅ Yes</td>
+        <td>❌ No</td>
+        <td>❌ No</td>
+      </tr>
+
+      <tr>
+        <td>Re-assign</td>
+        <td>✅ Yes</td>
+        <td>✅ Yes</td>
+        <td>❌ No</td>
+      </tr>
+
+      <tr>
+        <td>Hoisting</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+
+      <tr>
+        <td>Temporal Dead Zone</td>
+        <td>❌ No</td>
+        <td>✅ Yes</td>
+        <td>✅ Yes</td>
+      </tr>
+    </table>
+  </section>
+
+
+  <!-- HOISTING -->
+  <section>
+    <h2>4. Hoisting</h2>
+
+    <p>
+      JavaScript execution se pehle variable declarations ko
+      memory mein register karta hai. Is behavior ko
+      <strong>hoisting</strong> kehte hain.
+    </p>
+
+    <h3>var</h3>
+
+    <pre>
+console.log(x); // undefined
+
+var x = 10;
+    </pre>
+
+    <p>
+      var hoist hota hai aur initially <strong>undefined</strong>
+      milta hai.
+    </p>
+
+    <h3>let / const</h3>
+
+    <pre>
+console.log(x); // ❌ ReferenceError
+
+let x = 10;
+    </pre>
+
+    <p>
+      let aur const hoist hote hain, lekin declaration se pehle
+      access nahi kiye ja sakte. Is period ko
+      <strong>Temporal Dead Zone (TDZ)</strong> kehte hain.
+    </p>
+  </section>
+
+
+  <!-- WHEN TO USE -->
+  <section>
+    <h2>5. Kab kya use karein?</h2>
+
+    <h3>const</h3>
+
+    <p>
+      Jab variable ko re-assign nahi karna hai,
+      normally <strong>const</strong> use karo.
+    </p>
+
+    <pre>
+const name = "Sanu";
+const age = 28;
+    </pre>
+
+    <h3>let</h3>
+
+    <p>
+      Jab variable ki value future mein change karni hai,
+      <strong>let</strong> use karo.
+    </p>
+
+    <pre>
+let score = 0;
+
+score = 10;
+score = 20;
+    </pre>
+
+    <h3>var</h3>
+
+    <p>
+      Modern JavaScript mein generally var avoid kiya jata hai.
+      Ye mostly purane JavaScript code mein milta hai.
+    </p>
+  </section>
+
+
+  <!-- IMPORTANT -->
+  <section>
+    <h2>6. Sabse important rule 🧠</h2>
+
+    <ol>
+      <li>
+        Pehli preference: <strong>const</strong>
+      </li>
+
+      <li>
+        Agar value change karni hai: <strong>let</strong>
+      </li>
+
+      <li>
+        <strong>var</strong> ko modern JavaScript mein generally avoid karo.
+      </li>
+    </ol>
+
+    <pre>
+const name = "Sanu";  // value change nahi hogi
+
+let age = 28;         // value change ho sakti hai
+age = 29;
+
+// var old JavaScript code mein zyada milta hai
+    </pre>
+  </section>
+
+</div>
+    <script src="script.js">
+        // console.log("sanu")
+    </script>
+</body>
+</html>

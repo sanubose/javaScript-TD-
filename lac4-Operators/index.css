@@ -1,0 +1,104 @@
+/* =========================
+   Global
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.7;
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   Paragraph / Notes
+========================= */
+
+p {
+    max-width: 900px;
+    margin: 12px auto;
+    padding: 12px 18px;
+
+    background: #ffffff;
+    border-left: 4px solid #2563eb;
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   Strong / Titles
+========================= */
+
+p strong {
+    color: #1d4ed8;
+    font-weight: 700;
+}
+
+
+/* First line / Category headings */
+
+p strong:first-child {
+    color: #111827;
+}
+
+
+/* =========================
+   Code
+========================= */
+
+code {
+    background: #111827;
+    color: #22c55e;
+
+    padding: 3px 7px;
+    border-radius: 5px;
+
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+}
+
+
+/* =========================
+   Hover Effect
+========================= */
+
+p {
+    transition: all 0.25s ease;
+}
+
+p:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    p {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    code {
+        font-size: 12px;
+    }
+}

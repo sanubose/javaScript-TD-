@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- =========================
+     JavaScript Loops
+========================= -->
+
+<p>
+    <strong>JavaScript Loops:</strong>
+    Loops are used to execute the same block of code repeatedly
+    while a condition is true or for each item in a collection.
+</p>
+
+
+<!-- 1. Why Loops -->
+
+<p>
+    <strong>Why Use Loops:</strong>
+    Loops help us avoid writing the same code repeatedly.
+    Instead of writing the same statement many times, we can use a loop
+    to execute it automatically.
+</p>
+
+<p>
+    <strong>Example Without Loop:</strong>
+    <code>
+        console.log(1);
+        console.log(2);
+        console.log(3);
+        console.log(4);
+        console.log(5);
+    </code>
+</p>
+
+<p>
+    <strong>Example With Loop:</strong>
+    <code>
+        for (let i = 1; i &lt;= 5; i++) {
+            console.log(i);
+        }
+    </code>
+</p>
+
+
+<!-- 2. Types of Loops -->
+
+<p>
+    <strong>Types of Loops:</strong>
+    JavaScript provides several types of loops, including
+    <code>for</code>, <code>while</code>, <code>do...while</code>,
+    <code>for...of</code>, and <code>for...in</code>.
+</p>
+
+
+<!-- 3. for Loop -->
+
+<p>
+    <strong>for Loop:</strong>
+    The <code>for</code> loop is used when you know how many times
+    you want to execute a block of code.
+</p>
+
+<p>
+    <strong>Syntax:</strong>
+    <code>
+        for (initialization; condition; update) {
+            // code
+        }
+    </code>
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        for (let i = 1; i &lt;= 5; i++) {
+            console.log(i);
+        }
+    </code>
+</p>
+
+<p>
+    <strong>How the for Loop Works:</strong>
+    First, initialization runs once. Then the condition is checked.
+    If the condition is true, the loop body executes.
+    After that, the update expression runs.
+    This process continues until the condition becomes false.
+</p>
+
+
+<!-- 4. for Loop Flow -->
+
+<p>
+    <strong>for Loop Flow:</strong>
+    The execution order is:
+    initialization → condition → code → update → condition → code → update.
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        for (let i = 1; i &lt;= 3; i++) {
+            console.log(i);
+        }
+    </code>
+</p>
+
+<p>
+    <strong>Output:</strong>
+    <code>1 2 3</code>
+</p>
+
+
+<!-- 5. while Loop -->
+
+<p>
+    <strong>while Loop:</strong>
+    The <code>while</code> loop executes a block of code repeatedly
+    as long as the specified condition is true.
+</p>
+
+<p>
+    <strong>Syntax:</strong>
+    <code>
+        while (condition) {
+            // code
+        }
+    </code>
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        let i = 1;
+
+        while (i &lt;= 5) {
+            console.log(i);
+            i++;
+        }
+    </code>
+</p>
+
+
+<!-- 6. while Loop Important Point -->
+
+<p>
+    <strong>Important:</strong>
+    In a <code>while</code> loop, you must make sure that the condition
+    eventually becomes false. Otherwise, the loop can become an infinite loop.
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        let i = 1;
+
+        while (i &lt;= 5) {
+            console.log(i);
+            i++;
+        }
+    </code>
+</p>
+
+
+<!-- 7. do while -->
+
+<p>
+    <strong>do...while Loop:</strong>
+    The <code>do...while</code> loop executes the code block first
+    and checks the condition afterward.
+</p>
+
+<p>
+    <strong>Syntax:</strong>
+    <code>
+        do {
+            // code
+        } while (condition);
+    </code>
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        let i = 1;
+
+        do {
+            console.log(i);
+            i++;
+        } while (i &lt;= 5);
+    </code>
+</p>
+
+
+<!-- 8. do while Special Feature -->
+
+<p>
+    <strong>Special Feature of do...while:</strong>
+    A <code>do...while</code> loop always executes at least once,
+    even when the condition is initially false.
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        let i = 10;
+
+        do {
+            console.log(i);
+        } while (i &lt; 5);
+    </code>
+</p>
+
+<p>
+    <strong>Output:</strong>
+    <code>10</code>
+</p>
+
+
+<!-- 9. for...of -->
+
+<p>
+    <strong>for...of Loop:</strong>
+    The <code>for...of</code> loop is used to iterate over the values
+    of iterable objects such as arrays, strings, maps, and sets.
+</p>
+
+<p>
+    <strong>Example with Array:</strong>
+    <code>
+        let fruits = ["Apple", "Mango", "Banana"];
+
+        for (let fruit of fruits) {
+            console.log(fruit);
+        }
+    </code>
+</p>
+
+<p>
+    <strong>Output:</strong>
+    <code>Apple Mango Banana</code>
+</p>
+
+
+<!-- 10. for...of with String -->
+
+<p>
+    <strong>for...of with String:</strong>
+    The <code>for...of</code> loop can also iterate over each character
+    of a string.
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        let name = "Sanu";
+
+        for (let character of name) {
+            console.log(character);
+        }
+    </code>
+</p>
+
+
+<!-- 11. for...in -->
+
+<p>
+    <strong>for...in Loop:</strong>
+    The <code>for...in</code> loop is mainly used to iterate over
+    the enumerable property keys of an object.
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        let user = {
+            name: "Sanu",
+            age: 28,
+            city: "Sitapur"
+        };
+
+        for (let key in user) {
+            console.log(key);
+        }
+    </code>
+</p>
+
+<p>
+    <strong>Output:</strong>
+    <code>name age city</code>
+</p>
+
+
+<!-- 12. Access Object Values -->
+
+<p>
+    <strong>Access Object Values:</strong>
+    You can use the key obtained from <code>for...in</code>
+    to access the corresponding object value.
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        for (let key in user) {
+            console.log(user[key]);
+        }
+    </code>
+</p>
+
+
+<!-- 13. for...in vs for...of -->
+
+<p>
+    <strong>for...in vs for...of:</strong>
+    <code>for...in</code> gives property keys or indexes,
+    while <code>for...of</code> gives the actual values of an iterable.
+</p>
+
+<p>
+    <strong>Array Example:</strong>
+    <code>
+        let fruits = ["Apple", "Mango", "Banana"];
+
+        for (let index in fruits) {
+            console.log(index);
+        }
+
+        for (let fruit of fruits) {
+            console.log(fruit);
+        }
+    </code>
+</p>
+
+
+<!-- 14. break -->
+
+<p>
+    <strong>break:</strong>
+    The <code>break</code> statement immediately stops the loop
+    and moves execution to the code after the loop.
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        for (let i = 1; i &lt;= 10; i++) {
+
+            if (i === 5) {
+                break;
+            }
+
+            console.log(i);
+        }
+    </code>
+</p>
+
+<p>
+    <strong>Output:</strong>
+    <code>1 2 3 4</code>
+</p>
+
+
+<!-- 15. continue -->
+
+<p>
+    <strong>continue:</strong>
+    The <code>continue</code> statement skips the current iteration
+    and moves to the next iteration of the loop.
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        for (let i = 1; i &lt;= 5; i++) {
+
+            if (i === 3) {
+                continue;
+            }
+
+            console.log(i);
+        }
+    </code>
+</p>
+
+<p>
+    <strong>Output:</strong>
+    <code>1 2 4 5</code>
+</p>
+
+
+<!-- 16. Nested Loop -->
+
+<p>
+    <strong>Nested Loop:</strong>
+    A nested loop is a loop placed inside another loop.
+    It is commonly used for tables, grids, patterns, and matrix operations.
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        for (let i = 1; i &lt;= 3; i++) {
+
+            for (let j = 1; j &lt;= 3; j++) {
+                console.log(i, j);
+            }
+
+        }
+    </code>
+</p>
+
+
+<!-- 17. Infinite Loop -->
+
+<p>
+    <strong>Infinite Loop:</strong>
+    An infinite loop is a loop that never becomes false
+    and continues running indefinitely.
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        while (true) {
+            console.log("Running");
+        }
+    </code>
+</p>
+
+<p>
+    <strong>Warning:</strong>
+    Avoid infinite loops unless they are intentionally controlled,
+    because they can freeze or slow down the application.
+</p>
+
+
+<!-- 18. Loop with Array -->
+
+<p>
+    <strong>Loop with Array:</strong>
+    Loops are commonly used to process every element of an array.
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        let numbers = [10, 20, 30, 40];
+
+        for (let i = 0; i &lt; numbers.length; i++) {
+            console.log(numbers[i]);
+        }
+    </code>
+</p>
+
+
+<!-- 19. Loop with Condition -->
+
+<p>
+    <strong>Loop with Condition:</strong>
+    A loop can contain an <code>if</code> statement to perform
+    different operations based on each value.
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        for (let i = 1; i &lt;= 10; i++) {
+
+            if (i % 2 === 0) {
+                console.log(i);
+            }
+
+        }
+    </code>
+</p>
+
+<p>
+    <strong>Output:</strong>
+    <code>2 4 6 8 10</code>
+</p>
+
+
+<!-- 20. Reverse Loop -->
+
+<p>
+    <strong>Reverse Loop:</strong>
+    A loop can run in reverse by starting from a larger value
+    and decreasing the counter.
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        for (let i = 5; i &gt;= 1; i--) {
+            console.log(i);
+        }
+    </code>
+</p>
+
+<p>
+    <strong>Output:</strong>
+    <code>5 4 3 2 1</code>
+</p>
+
+
+<!-- 21. Loop and Function -->
+
+<p>
+    <strong>Loop with Function:</strong>
+    A function can contain a loop, or a loop can call a function
+    during each iteration.
+</p>
+
+<p>
+    <strong>Example:</strong>
+    <code>
+        function printNumber(number) {
+            console.log(number);
+        }
+
+        for (let i = 1; i &lt;= 5; i++) {
+            printNumber(i);
+        }
+    </code>
+</p>
+
+
+<!-- 22. Loop and User Input -->
+
+<p>
+    <strong>Loop with User Input:</strong>
+    Loops can be used to repeatedly process user input until
+    a particular condition is satisfied.
+</p>
+
+
+<!-- 23. When to Use for -->
+
+<p>
+    <strong>When to Use for Loop:</strong>
+    Use a <code>for</code> loop when you know the number of iterations
+    or when you need a counter.
+</p>
+
+
+<!-- 24. When to Use while -->
+
+<p>
+    <strong>When to Use while Loop:</strong>
+    Use a <code>while</code> loop when the number of iterations is not
+    necessarily known and execution depends on a condition.
+</p>
+
+
+<!-- 25. When to Use do while -->
+
+<p>
+    <strong>When to Use do...while:</strong>
+    Use <code>do...while</code> when the code must execute at least once
+    before checking the condition.
+</p>
+
+
+<!-- 26. When to Use for of -->
+
+<p>
+    <strong>When to Use for...of:</strong>
+    Use <code>for...of</code> when you want to directly access
+    the values of an iterable such as an array or string.
+</p>
+
+
+<!-- 27. When to Use for in -->
+
+<p>
+    <strong>When to Use for...in:</strong>
+    Use <code>for...in</code> mainly for iterating over object property keys.
+</p>
+
+
+<!-- 28. Loop Comparison -->
+
+<p>
+    <strong>Loop Comparison:</strong>
+    <code>for</code> is useful for counter-based loops,
+    <code>while</code> is useful for condition-based loops,
+    <code>do...while</code> executes at least once,
+    <code>for...of</code> iterates over values,
+    and <code>for...in</code> iterates over object keys.
+</p>
+
+
+<!-- 29. Loop Control Statements -->
+
+<p>
+    <strong>Loop Control Statements:</strong>
+    JavaScript provides <code>break</code> to stop a loop
+    and <code>continue</code> to skip the current iteration.
+</p>
+
+
+<!-- 30. Loops and Performance -->
+
+<p>
+    <strong>Loops and Performance:</strong>
+    Loops are efficient for repetitive operations, but unnecessary
+    or very large loops can affect application performance.
+    Always avoid doing expensive work repeatedly when it is not necessary.
+</p>
+
+
+<!-- 31. Modern Array Methods -->
+
+<p>
+    <strong>Modern Array Iteration:</strong>
+    JavaScript also provides array methods such as
+    <code>forEach()</code>, <code>map()</code>, <code>filter()</code>,
+    and <code>reduce()</code> for processing arrays.
+</p>
+
+<p>
+    <strong>forEach():</strong>
+    Executes a function once for each array element.
+</p>
+
+<p>
+    Example:
+    <code>
+        numbers.forEach(function(number) {
+            console.log(number);
+        });
+    </code>
+</p>
+
+<p>
+    <strong>Important:</strong>
+    <code>forEach()</code> cannot be stopped early using a normal
+    <code>break</code> statement.
+</p>
+
+
+<!-- 32. Loop Summary -->
+
+<p>
+    <strong>Loop Summary:</strong>
+    JavaScript loops allow us to repeat code efficiently.
+    The main loops are <code>for</code>, <code>while</code>,
+    <code>do...while</code>, <code>for...of</code>, and
+    <code>for...in</code>.
+</p>
+
+<p>
+    <strong>Important Loop Keywords:</strong>
+    <code>break</code> stops a loop,
+    <code>continue</code> skips the current iteration,
+    and <code>return</code> exits the entire function when used inside a function.
+</p>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- =========================
+     JavaScript Conditional Statements
+========================= -->
+
+<p>
+    <strong>JavaScript Conditional Statements:</strong>
+    Conditional statements are used to execute different blocks of code
+    based on whether a condition is true or false.
+</p>
+
+
+<!-- 1. if Statement -->
+
+<p>
+    <strong>if Statement:</strong>
+    The <code>if</code> statement executes a block of code only when the given
+    condition is true.
+</p>
+
+<p>
+    Example:
+    <code>if (age &gt;= 18) { console.log("You are an adult"); }</code>
+</p>
+
+
+<!-- 2. if-else Statement -->
+
+<p>
+    <strong>if-else Statement:</strong>
+    The <code>if-else</code> statement executes one block when the condition
+    is true and another block when the condition is false.
+</p>
+
+<p>
+    Example:
+    <code>
+        if (age &gt;= 18) { console.log("Adult"); }
+        else { console.log("Minor"); }
+    </code>
+</p>
+
+
+<!-- 3. else-if Statement -->
+
+<p>
+    <strong>else-if Statement:</strong>
+    The <code>else if</code> statement is used when we need to check multiple
+    conditions.
+</p>
+
+<p>
+    Example:
+    <code>
+        if (marks &gt;= 90) { console.log("A"); }
+        else if (marks &gt;= 75) { console.log("B"); }
+        else if (marks &gt;= 50) { console.log("C"); }
+        else { console.log("Fail"); }
+    </code>
+</p>
+
+
+<!-- 4. Multiple Conditions -->
+
+<p>
+    <strong>Multiple Conditions:</strong>
+    Logical operators such as <code>&amp;&amp;</code>, <code>||</code>, and
+    <code>!</code> can be used to combine multiple conditions.
+</p>
+
+<p>
+    Example:
+    <code>
+        if (age &gt;= 18 &amp;&amp; age &lt;= 60) {
+        console.log("Eligible");
+        }
+    </code>
+</p>
+
+
+<!-- 5. Nested if -->
+
+<p>
+    <strong>Nested if:</strong>
+    A nested <code>if</code> statement means placing one <code>if</code>
+    statement inside another <code>if</code> statement.
+</p>
+
+<p>
+    Example:
+    <code>
+        if (age &gt;= 18) {
+            if (hasId) {
+                console.log("Allowed");
+            }
+        }
+    </code>
+</p>
+
+
+<!-- 6. Ternary Operator -->
+
+<p>
+    <strong>Ternary Operator:</strong>
+    The ternary operator is a short way to write a simple
+    <code>if-else</code> condition.
+</p>
+
+<p>
+    Syntax:
+    <code>condition ? valueIfTrue : valueIfFalse</code>
+</p>
+
+<p>
+    Example:
+    <code>
+        let result = age &gt;= 18 ? "Adult" : "Minor";
+    </code>
+</p>
+
+
+<!-- 7. switch Statement -->
+
+<p>
+    <strong>switch Statement:</strong>
+    The <code>switch</code> statement is used when we want to compare one
+    value with multiple possible cases.
+</p>
+
+<p>
+    Example:
+    <code>
+        switch (day) {
+            case "Monday":
+                console.log("Start of the week");
+                break;
+            case "Sunday":
+                console.log("Weekend");
+                break;
+            default:
+                console.log("Other day");
+        }
+    </code>
+</p>
+
+
+<!-- 8. case -->
+
+<p>
+    <strong>case:</strong>
+    The <code>case</code> keyword defines a possible value that JavaScript
+    checks inside a <code>switch</code> statement.
+</p>
+
+
+<!-- 9. break -->
+
+<p>
+    <strong>break:</strong>
+    The <code>break</code> statement stops the execution of the current
+    <code>switch</code> case or loop.
+</p>
+
+
+<!-- 10. default -->
+
+<p>
+    <strong>default:</strong>
+    The <code>default</code> block executes when none of the cases match
+    the given value.
+</p>
+
+
+<!-- 11. Truthy -->
+
+<p>
+    <strong>Truthy Value:</strong>
+    A truthy value behaves like <code>true</code> when used in a condition.
+</p>
+
+<p>
+    Examples of commonly truthy values:
+    <code>"Hello"</code>, <code>10</code>, <code>true</code>,
+    <code>[]</code>, and <code>{}</code>.
+</p>
+
+
+<!-- 12. Falsy -->
+
+<p>
+    <strong>Falsy Value:</strong>
+    A falsy value behaves like <code>false</code> when used in a condition.
+</p>
+
+<p>
+    Common falsy values are:
+    <code>false</code>, <code>0</code>, <code>-0</code>,
+    <code>""</code>, <code>null</code>, <code>undefined</code>,
+    and <code>NaN</code>.
+</p>
+
+
+<!-- 13. Truthy/Falsy Example -->
+
+<p>
+    <strong>Truthy/Falsy Example:</strong>
+    JavaScript automatically converts a value to Boolean when it is used
+    directly as a condition.
+</p>
+
+<p>
+    Example:
+    <code>
+        let username = "Sanu";
+
+        if (username) {
+            console.log("Username exists");
+        }
+    </code>
+</p>
+
+
+<!-- 14. Conditional Operator with Logical Operators -->
+
+<p>
+    <strong>Conditional Expression:</strong>
+    Conditions can be combined using logical operators to create more
+    complex decisions.
+</p>
+
+<p>
+    Example:
+    <code>
+        if (username &amp;&amp; password) {
+            console.log("Login successful");
+        }
+    </code>
+</p>
+
+
+<!-- 15. Nullish Coalescing -->
+
+<p>
+    <strong>Nullish Coalescing Operator:</strong>
+    The <code>??</code> operator provides a default value when the left side
+    is <code>null</code> or <code>undefined</code>.
+</p>
+
+<p>
+    Example:
+    <code>
+        let username = null;
+        let name = username ?? "Guest";
+    </code>
+</p>
+
+
+<!-- 16. Optional Chaining -->
+
+<p>
+    <strong>Optional Chaining:</strong>
+    The <code>?.</code> operator safely accesses a property when an object
+    may be <code>null</code> or <code>undefined</code>.
+</p>
+
+<p>
+    Example:
+    <code>
+        user?.address?.city
+    </code>
+</p>
+
+
+<!-- 17. Conditional Flow -->
+
+<p>
+    <strong>Conditional Flow:</strong>
+    JavaScript checks conditions from top to bottom. Once a matching
+    condition is found in an <code>if-else if-else</code> chain,
+    its block is executed and the remaining conditions are skipped.
+</p>
+
+<p>
+    Example:
+    <code>
+        if (marks &gt;= 90) {
+            console.log("A");
+        } else if (marks &gt;= 60) {
+            console.log("B");
+        } else {
+            console.log("C");
+        }
+    </code>
+</p>
+
+
+<!-- 18. Comparison with switch -->
+
+<p>
+    <strong>if-else vs switch:</strong>
+    Use <code>if-else</code> when you need to check ranges or complex
+    conditions. Use <code>switch</code> when comparing one value against
+    multiple specific values.
+</p>
+
+
+<!-- 19. Conditional Statements Summary -->
+
+<p>
+    <strong>Conditional Statements Summary:</strong>
+    The main conditional concepts in JavaScript are
+    <code>if</code>, <code>if-else</code>, <code>else if</code>,
+    <code>nested if</code>, <code>switch</code>, and the
+    <code>ternary operator</code>.
+</p>
+    <script src="index2.js"></script>
+</body>
+</html>
